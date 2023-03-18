@@ -7,8 +7,8 @@
 // // 1. write a function which accept basic salary and benefits as input
 // // 2. calculate the payee using a formula
 // // 3. formula: Step 1. Gross Income /grossPay= Basic salary + allowances + commissions. 
-// //             Step 2. Taxable Income = Gross Income - all deductions/exemptions allowed by law e.g. NSSF, private pension.
-
+// //             Step 2. Taxable Income = Gross Income - payee- all deductions/exemptions allowed by law e.g. NSSF, private pension.
+                //   payee is tax
 
 
 
