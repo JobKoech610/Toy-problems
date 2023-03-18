@@ -27,9 +27,9 @@ function marks(mark){
         return "grade B";
       } else if (mark >= 50 && mark <= 59) {
         return "grade C";
-      } else if (mark >= 40 && mark<= 49) {
+      } else if (mark >= 40 && mark <= 49) {
         return "grade D";
-      } else if (mark>=39) {
+      } else if (mark <= 39) {
         return "grade E";
       }
 
@@ -37,6 +37,9 @@ function marks(mark){
 }
 
 console.log(marks(100));
+console.log(marks(50));
+console.log(marks(20));
+console.log(marks(70));
 
 
 
