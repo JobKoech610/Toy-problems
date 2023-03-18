@@ -42,5 +42,7 @@ if(demeritPoint>12){
 
 }
 
+console.log(car(100));
+console.log(car(150));
 console.log(car(20));
 
