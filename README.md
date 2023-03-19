@@ -29,7 +29,8 @@ write a function which accept basic salary and benefits as input
                 // note:  payee is tax
                 challenge two contains two conditional statements
 
-# instructions
+# setup instructions
+-download the code to your local repo the run using the following steps
 
 ## running the code 
 ### option one :in challenge 1,2,3
