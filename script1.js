@@ -22,7 +22,9 @@ function marks(mark){
  
 
     // if statement to give a grade according to the marks
-    if (mark> 79) {
+    if (mark < 0 || mark > 100) {
+      return "Invalid input: give an input of range 0-100";
+    }  else if (mark> 79) {
         return "grade A";
       } else if (mark >= 60 && mark <= 79) {
         return "grade B";
@@ -41,6 +43,7 @@ console.log(marks(80));
 console.log(marks(75));
 console.log(marks(54));
 console.log(marks(20));
+console.log(marks(1000));
 
 
 
