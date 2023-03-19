@@ -16,11 +16,16 @@
 // 4.for every 5km/s above 70 should give one demerit point meaning (5km/s= 1demerit point)
 // 5. output the total number of demerit points.
 // 6. more than 12 demerit points, the function should print: “License suspended”.
+/*
+let inputSpeed = prompt("speed");//accept inputs
 
+     let speed = parseInt(inputSpeed, 10)
+     */
+
+
+// the fucntions check the speedlimit and calculate the demerits points.
 function car(speed){
-    // let inputSpeed = prompt("speed");//accept inputs
-
-    // let speed = parseInt(inputSpeed, 10)
+     
 const speedLimit = 70;
 // 5km/s= 1demerit point
 const kilometersPerDemerit = 5;
@@ -41,8 +46,8 @@ if(demeritPoint>12){
 }
 
 }
-
-console.log(car(100));
+// function  calling 
+console.log(car(30));
+console.log(car(70));
 console.log(car(150));
-console.log(car(20));
 

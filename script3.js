@@ -9,19 +9,24 @@
 // // 3. formula: Step 1. Gross Income /grossPay= Basic salary + allowances + commissions. 
 // //             Step 2. Taxable Income = Gross Income - payee- all deductions/exemptions allowed by law e.g. NSSF, private pension.
                 //   payee is tax
+/*
+let basicsalaryString= prompt("enter your basicsalary");
+let basicSalary = parseInt( basicsalaryString,10);
+let benefitsString = prompt("enter your benefits");
+let benefits =parseInt(benefitsString,10);
+*/
 
-
-
-
+//function accepting  basic salary and benefits as inputs
 function paye(basicSalary,benefits){
 
-    //calculate gross income
+
+    //calculate grosspay
     // benefits include all allowances and commissions
     let grossPay = basicSalary + benefits;
     
     //taxable income
 
-    // Calculate payee (tax)
+    // Calculate payee (tax) 
 let payee;
 if (grossPay <= 24000) {
   payee = 0;
@@ -33,7 +38,7 @@ if (grossPay <= 24000) {
   payee = 5600 + (grossPay - 60000) * 0.3;
 }
 
-    // conditional statement to give rate of deductions of each gross income
+    // conditional statement to give rate of nhifdeductions of each gross income
     // let grossPay = 15000; // replace with the actual gross pay amount
 
     let nhifdeductions;
@@ -77,16 +82,21 @@ if (grossPay <= 5999) {
 }
 // Calculate NSSF Deductions
 const nssfDeductions = Math.min(0.12 * basicSalary, 2160);
+//calculate all deductions
 let deductions = (nhifdeductions+nssfDeductions)
-let taxableIncome = (grossPay - payee - deductions);
+//calculation of netsalary
+let netSalary = (grossPay - payee - deductions);
+//output 
 console.log(`grossPay: ${grossPay}`);
 console.log(`payee: ${payee}`)
 console.log(`total deductions: ${deductions}`);
 console.log(`nssfdeductions: ${nssfDeductions}`);
-console.log(`taxableIncome: ${taxableIncome}`);
+console.log(`NetSalary: ${netSalary}`);
 
 }
-paye(1000,50)
+//function calling with basicsalry and benefits as argurments
+paye(1000000,50)
+//paye()
     
 //  console.log(`Net-Salary: ${paye(1000,50)} kshs`);
  

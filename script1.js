@@ -12,15 +12,16 @@
 // 4.we should expect correct output when student enter the mark.
 // 5.output the grade through the alert() for grade to be visible.
 
-  
+  /*
+let input = prompt("enter your marks here");//accept inputs
 
-
+let mark = parseInt(input, 10); //change input from text to number
+*/
+//fucntion that return a grade
 function marks(mark){
-//     let input = prompt("enter your marks here");//accept inputs
+ 
 
-// let mark = parseInt(input, 10); //change input from text to number
-
-    // let grade;
+    // if statement to give a grade according to the marks
     if (mark> 79) {
         return "grade A";
       } else if (mark >= 60 && mark <= 79) {
@@ -35,11 +36,11 @@ function marks(mark){
 
     
 }
-
-console.log(marks(100));
-console.log(marks(50));
+// calling of marks fucntion with an argurment
+console.log(marks(80));
+console.log(marks(75));
+console.log(marks(54));
 console.log(marks(20));
-console.log(marks(70));
 
 
 
