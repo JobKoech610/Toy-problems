@@ -17,7 +17,7 @@ let benefits =parseInt(benefitsString,10);
 */
 
 //function accepting  basic salary and benefits as inputs
-function paye(basicSalary,benefits){
+function calNetSalary(basicSalary,benefits){
 
 
     //calculate grosspay
@@ -29,61 +29,60 @@ function paye(basicSalary,benefits){
     // Calculate payee (tax) 
 let payee;
 if (grossPay <= 24000) {
-  payee = 0;
-} else if (grossPay <= 40000) {
-  payee = (grossPay - 24000) * 0.1;
-} else if (grossPay <= 60000) {
-  payee = 1600 + (grossPay- 40000) * 0.2;
-} else {
-  payee = 5600 + (grossPay - 60000) * 0.3;
+  payee = (grossPay)*0.1;
+} else if (grossPay >= 24000 && grossPay<=32333) {
+  payee = (grossPay) * 0.25;
+} else if(grossPay >= 32333){
+payee = (grossPay) * 0.3;
 }
 
     // conditional statement to give rate of nhifdeductions of each gross income
     // let grossPay = 15000; // replace with the actual gross pay amount
 
-    let nhifdeductions;
+    let nhifdeDuctions;
    
 if (grossPay <= 5999) {
-    nhifdeductions=150;
+    nhifdeDuctions=150;
 } else if (grossPay >= 6000 && grossPay <= 7999) {
-    nhifdeductions=300;
+    nhifdeDuctions=300;
 } else if (grossPay >= 8000 && grossPay <= 11999) {
-    nhifdeductions=400;
+    nhifdeDuctions=400;
 } else if (grossPay >= 12000 && grossPay <= 14999) {
-    nhifdeductions=500;
+    nhifdeDuctions=500;
 } else if (grossPay >= 15000 && grossPay <= 19999) {
-    nhifdeductions=600;
+    nhifdeDuctions=600;
 } else if (grossPay >= 20000 && grossPay <= 24999) {
-    nhifdeductions=750;
+    nhifdeDuctions=750;
 } else if (grossPay >= 25000 && grossPay <= 29999) {
-    nhifdeductions=850;
+    nhifdeDuctions=850;
 } else if (grossPay >= 30000 && grossPay <= 34999) {
-    nhifdeductions= 900;
+    nhifdeDuctions= 900;
 } else if (grossPay >= 35000 && grossPay <= 39999) {
-    nhifdeductions=950;
+    nhifdeDuctions=950;
 } else if (grossPay >= 40000 && grossPay <= 44999) {
-    nhifdeductions=1000;
+    nhifdeDuctions=1000;
 } else if (grossPay >= 45000 && grossPay <= 49999) {
-    nhifdeductions=1100;
+    nhifdeDuctions=1100;
 } else if (grossPay >= 50000 && grossPay <= 59999) {
-    nhifdeductions=1200;
+    nhifdeDuctions=1200;
 } else if (grossPay >= 60000 && grossPay <= 69999) {
-    nhifdeductions=1300;
+    nhifdeDuctions=1300;
 } else if (grossPay >= 70000 && grossPay <= 79999) {
-    nhifdeductions=1400;
+    nhifdeDuctions=1400;
 } else if (grossPay >= 80000 && grossPay <= 89999) {
-    nhifdeductions=1500;
+    nhifdeDuctions=1500;
 } else if (grossPay >= 90000 && grossPay <= 99999) {
-    nhifdeductions= 1600;
+    nhifdeDuctions= 1600;
 } else if (grossPay >= 100000) {
-    nhifdeductions= 1700;
+    nhifdeDuctions= 1700;
 } else {
   console.log("Invalid gross pay amount");
 }
 // Calculate NSSF Deductions
-const nssfDeductions = Math.min(0.12 * basicSalary, 2160);
+
+const nssfDeductions = (0.06 * basicSalary);
 //calculate all deductions
-let deductions = (nhifdeductions+nssfDeductions)
+let deductions = (nhifdeDuctions+nssfDeductions)
 //calculation of netsalary
 let netSalary = (grossPay - payee - deductions);
 //output 
@@ -95,7 +94,7 @@ console.log(`NetSalary: ${netSalary}`);
 
 }
 //function calling with basicsalry and benefits as argurments
-paye(1000000,50)
+calNetSalary(10000,5000)
 //paye()
     
 //  console.log(`Net-Salary: ${paye(1000,50)} kshs`);
