@@ -39,11 +39,11 @@ function marks(mark){
     
 }
 // calling of marks fucntion with an argurment
-console.log(marks(80));
-console.log(marks(75));
-console.log(marks(54));
-console.log(marks(20));
-console.log(marks(1000));
+alert(marks(Number(parseInt(prompt("enter your marks"),10))));
+// console.log(marks(75));
+// console.log(marks(54));
+// console.log(marks(20));
+// console.log(marks(1000));
 
 
 
